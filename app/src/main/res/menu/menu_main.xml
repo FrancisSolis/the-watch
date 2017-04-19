@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.engineering.software.thewatch.interface.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/signOut"
+        android:orderInCategory="200"
+        android:title="Sign out"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/filter"
+        android:orderInCategory="90"
+        android:showAsAction="always"
+        android:title="Filter"
+        android:icon="@drawable/filter"
+        app:showAsAction="ifRoom" />
+</menu>

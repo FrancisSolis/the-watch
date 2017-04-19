@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+<RelativeLayout
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/baseBackground"
+    tools:context="com.engineering.software.thewatch.userinterface.profile.ProfileSetupActivity"
+    android:padding="0dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/thumbnailContainer"
+        android:visibility="visible"
+        android:layout_height="230dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@android:drawable/ic_menu_gallery"
+            android:id="@+id/thumbnail"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+            android:id="@+id/retake"
+            android:layout_margin="15dp"
+            android:layout_gravity="end"
+            android:visibility="invisible"
+            android:onClick="retake"/>
+
+        <LinearLayout
+            android:id="@+id/lyt_photo_grid"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_take_a_photo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/take_photo"
+                android:onClick="takePhoto"
+                android:elevation="8dp" />
+            <ImageView
+                android:id="@+id/img_choose_a_photo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/choose_photo"
+                android:onClick="takeFromGallery"
+                android:elevation="8dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/lyt_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/thumbnailContainer"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:text="@string/desc_title"
+            android:textColor="@color/text_color"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:maxLines="1"
+            android:background="@drawable/single_line_edittext_with_border"
+            android:padding="@dimen/activity_vertical_margin"
+            android:hint="Enter a title"
+            android:inputType="text" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lyt_description"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lyt_title">
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:text="@string/desc_description"
+            android:textColor="@color/text_color"
+            android:textSize="15sp"
+            />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_below="@id/tv_description"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@drawable/single_line_edittext_with_border"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/activity_vertical_margin"
+            android:layout_height="150dp"
+            android:singleLine="false"
+            android:gravity="start"
+            android:hint="Enter a description"
+            android:isScrollContainer="true"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideOverlay" />
+
+        <TextView
+            android:id="@+id/tv_description_word_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_below="@id/et_description"
+            android:layout_alignRight="@id/et_description"
+            android:text="999 characters left"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/notes_font_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lyt_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lyt_description">
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:text="@string/desc_location"
+            android:textColor="@color/text_color"
+            android:textSize="15sp" />
+
+        <!--com.seatgeek.placesautocomplete.PlacesAutocompleteTextView
+            android:id="@+id/et_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_location"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:background="@drawable/single_line_edittext_with_border"
+            app:pacv_googleMapsApiKey="AIzaSyCkG16wwabnYOSLJBhtqjYKqg3WPs9bJug"
+            android:padding="@dimen/activity_vertical_margin" -->
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/et_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_location"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_gravity="center_horizontal"
+            android:hint="Enter a location"
+            android:selectAllOnFocus="true"
+            android:background="@drawable/single_line_edittext_with_border"
+
+            android:padding="@dimen/activity_vertical_margin" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lyt_mood"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lyt_location"
+        android:paddingRight="19dp">
+        <TextView
+            android:id="@+id/tv_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:text="@string/desc_mood"
+            android:textColor="@color/text_color"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin"
+            android:background="@drawable/spinner"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/tv_mood"
+            android:layout_alignLeft="@+id/tv_mood"
+            android:layout_alignStart="@+id/tv_mood"
+            android:id="@+id/moodSpinner" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tags"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lyt_mood"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/tv_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:text="@string/desc_tags"
+            android:textColor="@color/text_color"
+            android:textSize="15sp" />
+
+        <me.originqiu.library.EditTag
+            android:id="@+id/et_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tags"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            app:tag_layout="@layout/view_sample_tag"
+            app:delete_mode_bg="@drawable/rounded_rectangle_delete"
+            app:input_layout="@layout/view_sample_input_tag"
+            android:background="@drawable/single_line_edittext_with_border"
+            android:padding="@dimen/activity_vertical_margin" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lyt_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tags"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btn_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin"
+            android:background="@drawable/btn_the_watch"
+            android:text="Post"
+            android:onClick="onPostClick"
+            android:textColor="@color/baseBackground"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="25dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+</ScrollView>

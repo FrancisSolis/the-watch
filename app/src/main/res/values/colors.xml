@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF5722</color>
+    <color name="colorPrimaryDark">#E64A19</color>
+    <color name="colorAccent">#DD2C00</color>
+    <color name="baseBackground">#FBE9E7</color>
+    <color name="text_color">#1d1d1d</color>
+    <color name="text_color_2">#eeeeee</color>
+    <color name="text_color_3">#444444</color>
+    <color name="rank_naysayer">#FFEBEE</color>
+    <color name="rank_watcher">#FBE9E7</color>
+    <color name="rank_spotter"> #E3F2FD</color>
+    <color name="rank_scout">#FFFDE7</color>
+    <color name="rank_spy">#FAFAFA</color>
+    <color name="rank_chronicler">#E8F5E9</color>
+    <color name="rank_maven">#F3E5F5</color>
+    <color name="rank_sentinel">#FFF8E1</color>
+    <color name="color_naysayer">#F44336</color>
+    <color name="color_watcher">#FF5722</color>
+    <color name="color_spotter">#2196F3</color>
+    <color name="color_scout">#FFEB3B</color>
+    <color name="color_spy">#9E9E9E</color>
+    <color name="color_chronicler">#4CAF50</color>
+    <color name="color_maven">#9C27B0</color>
+    <color name="color_sentinel">#FFC107</color>
+</resources>

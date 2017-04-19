@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_news_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/lyt_upper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/iv_avatar_frame"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/profile_avatar_chronicler_bg">
+
+                    <ImageView
+                        android:id="@+id/iv_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/avatar_placeholder" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Username"
+                        android:textColor="#1d1d1d"
+                        android:textSize="22sp" />
+
+                    <!-- Marker Icon and Primary Location -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_marker"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/location_marker" />
+
+                        <TextView
+                            android:id="@+id/tv_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="2dp"
+                            android:text="Location, Location"
+                            android:textColor="#1d1d1d"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_secondary_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="34dp"
+                        android:text="Location, Location"
+                        android:textColor="#696969"
+                        android:textSize="10sp" />
+
+                    <!-- Clock Icon and Date -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_clock"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/clock" />
+
+                        <TextView
+                            android:id="@+id/tv_date_and_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="2dp"
+                            android:text="February 14, 1910"
+                            android:textColor="#1d1d1d"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_divider"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@id/lyt_upper"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/lyt_upper"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/avatar_placeholder"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Title of the Post"
+                    android:textColor="#1d1d1d"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Description blah blah blah blah blah blah blah blah blah blah blah blah blah blah"
+                    android:textColor="#1d1d1d"
+                    android:textSize="15sp" />
+
+                <!--Mood Icon and Moods-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_mood"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/tv_description"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/moods" />
+
+                    <TextView
+                        android:id="@+id/tv_mood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_description"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@id/iv_mood"
+
+                        android:text="Mood"
+                        android:textColor="#1d1d1d"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!--Tag Icon and Tags-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_tags"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@id/iv_mood"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/tags" />
+
+                    <TextView
+                        android:id="@+id/tv_tags"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_mood"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@id/iv_tags"
+
+
+                        android:text="Tags"
+                        android:textColor="#1d1d1d"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="25dp"
+
+                        android:text="987"
+                        android:textColor="#1d1d1d"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_literal_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/tv_rating"
+
+                        android:text=" ratings"
+                        android:textColor="#1d1d1d"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_upvote"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@id/tv_literal_rating"
+                        android:src="@drawable/upvote" />
+
+                    <ImageView
+                        android:id="@+id/iv_downvote"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="25dp"
+                        android:src="@drawable/downvote" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

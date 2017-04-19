@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">The Watch</string>
+    <string name="profile_setup_name">Profile Setup</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="desc_title">Title</string>
+    <string name="desc_description">Description</string>
+    <string name="desc_location">Location</string>
+    <string name="desc_mood">Mood</string>
+    <string name="desc_tags">Tags</string>
+    <string name="title_activity_deleteme">deleteme</string>
+    <string name="dialog_play_services_unavailable">Google Play Services are unavailable.</string>
+    <string name="dialog_download_play_services">Download Play Services</string>
+    <string name="dialog_close_program">Close Program</string>
+</resources>

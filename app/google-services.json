@@ -1,0 +1,71 @@
+{
+  "project_info": {
+    "project_number": "891718263452",
+    "firebase_url": "https://the-watch-539d3.firebaseio.com",
+    "project_id": "the-watch-539d3",
+    "storage_bucket": "the-watch-539d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891718263452:android:a5799ac0b8fd490a",
+        "android_client_info": {
+          "package_name": "com.engineering.software.thewatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891718263452-nchcsgts9mvk1o1jbpo1sbtj2nub5126.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.engineering.software.thewatch",
+            "certificate_hash": "43422C1606D215BE0F6C8DBEBE7E0F7E6500B10D"
+          }
+        },
+        {
+          "client_id": "891718263452-ebvq026h3u09d22narg14as09kqgtkj4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.engineering.software.thewatch",
+            "certificate_hash": "67C0E5CF199FCA295005E8C06AD222EDF3416AA0"
+          }
+        },
+        {
+          "client_id": "891718263452-2qjhkvt3gd6rjbls227qlpb8h4bob0bu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.engineering.software.thewatch",
+            "certificate_hash": "4FBFD8FE2D5AA19703F6178217523E85807340F8"
+          }
+        },
+        {
+          "client_id": "891718263452-arq648ggal14hqe50hjrduonv08itoa3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSZBOlnag-i6HjmVR3HIVS9ZKDyPApd_E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891718263452-arq648ggal14hqe50hjrduonv08itoa3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
